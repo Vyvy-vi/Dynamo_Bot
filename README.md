@@ -1,6 +1,7 @@
 # Dynamo_Bot
 ### This is an interactive python bot made with discord.py
-### An entertainment bot containing many features, games and a lovely coffee commands
+### An entertainment bot containing many features, games and a lovely coffee command.
+### Overall a shitpost bot.... 
 ### The default prefix is an underscore ( _ )
 ### The help command is _helpme_
 ### Bot-Setup steps-
