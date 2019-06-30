@@ -187,12 +187,35 @@ async def cmds(ctx):
     embed.set_footer(text='I hope that helped......')
     await ctx.send(embed=embed)
 
+@client.command()
+async def rate(ctx, * ,target):
+    for ki in range(1):
+        ki = random.randint(1,10)
+        if (ki>5):
+            sym=':slight_smile:'
+        elif(ki==5):
+            sym=':nuetral_face:'
+        else:
+            sym=':frowning2:'
+        embed=discord.Embed(title='Hmmmmmmmm',description=f'I rate {target} a {k}/10 {sym}',colour=discord.Color.pink())
+        await ctx.send(embed=embed)
+
+@client.command()
+async def stab(ctx, * , victim):
+    await ctx.send(f'{victim} just got stabbed....')
 
 @client.command(aliases=['spamalot','shitpost'])
 async def spam(ctx, num:int , * , text):
     while(num>0):
         await ctx.send(text)
         num-=1
+
+@client.command()
+async def better(ctx , * ,arg):
+    arg1 , arg2 = arg.split('OR')
+    arf=[arg1,arg2]
+    await ctx.send(f'{random.choice(arf)} is definitely better.......')
+
 
 @client.command()
 async def reload(ctx, extension):
