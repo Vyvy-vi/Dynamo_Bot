@@ -216,6 +216,15 @@ async def better(ctx , * ,arg):
     arf=[arg1,arg2]
     await ctx.send(f'{random.choice(arf)} is definitely better.......')
 
+@client.command()
+async def worse(ctx, *,stat):
+    st1 , st2 = stat.split('OR')
+    sta=[st1 , st2]
+    await ctx.send(f'{random.choice(sta)} is definitely the worst....')
+
+@client.command()
+async def radioactive():
+    await ctx.send(f'....')
 
 @client.command()
 async def reload(ctx, extension):
