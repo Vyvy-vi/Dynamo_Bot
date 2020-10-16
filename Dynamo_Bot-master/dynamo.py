@@ -6,7 +6,10 @@ from inputs import responses , fortunes , quo , nerd , tech , rost , bk , cmp , 
 import os
 from itertools import cycle
 
-client = commands.Bot(command_prefix = '_')
+intents = discord.Intents.default()
+intents.typing = False
+intents.presences = False
+client = commands.Bot(command_prefix = '_', intents=intents)
 
 status = cycle(["_help | :(",
      "with python",
@@ -275,15 +278,6 @@ async def unban(ctx , * ,member:discord.Member):
             await ctx.guild.unban(user)
             await ctx.send(f'{user.mention} has been unbanned....')
             return
-
-
-
-
-
-
-
-
-
 
 
 client.run(token)
